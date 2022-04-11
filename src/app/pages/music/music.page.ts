@@ -56,6 +56,13 @@ export class MusicPage implements OnInit {
 
   constructor() { }
 
+    option = {
+      slidesPerview: 1.5, 
+      centeredSlides: true,
+      loop: true,
+      spaceBetween: 10, 
+      //autoplay: true,
+    }
   ngOnInit() {
   }
 

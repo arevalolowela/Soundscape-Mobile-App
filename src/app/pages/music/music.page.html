@@ -1,5 +1,5 @@
 <ion-content [fullscreen]="true">
-  <ion-searchbar class="ion-padding"></ion-searchbar>
+  <ion-searchbar class="ion-padding" showCancelButton animated placeholder="Search" (ionChange)="Search($event)"></ion-searchbar>
   <h1>Soundscape Home Page</h1>
 
 <ion-slides [options]="options" class="ion-margin-top">
@@ -40,6 +40,7 @@
     8D Musics
   </ion-segment-button>
 </ion-segment>
+
   <div [ngSwitch]="yudsegment">
     <ion-list *ngSwitchCase="'Relax'">
       <ion-item lines="none" *ngFor="let song of songs" (click)="playSong(song.title,song.subtitle,song.img,song.path)">
